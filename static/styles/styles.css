@@ -1,0 +1,89 @@
+@media screen and (max-width: 1px) {
+    /* TODO */
+
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 70%;
+}
+
+.mainHeader {
+    text-align: center;
+}
+
+body {
+    font-family: Consolas;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondaryHeader {
+    text-align: center;
+}
+
+.radioInputWrapper {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 15px 15px 15px 20px;
+}
+
+.questionWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.questionText {
+    margin-block: 0px;
+}
+
+.answerOptionsFormWrapper {
+    width: 100%;
+}
+
+.submitButtonWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.commonButton{
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.answerOptionsForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answerOptionsWrapper{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.radioInputWrapper{
+    display: flex;
+}
+
+.radioInputButton{
+    width: 20px;
+    height: 20px;
+}
+
+.radioInputText{
+    margin-left: 20px;
+    font-size: 20px;
+}
