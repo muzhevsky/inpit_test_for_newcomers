@@ -3,6 +3,8 @@
 
 }
 
+
+
 .mainBlock {
     display: flex;
     flex-direction: column;
@@ -11,8 +13,16 @@
     width: 70%;
 }
 
-.mainHeader {
-    text-align: center;
+.header {
+    width: 100%;
+    height: 50%;
+    background-color: #9D251A;
+    color: white;
+    font-size:2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
 }
 
 body {
@@ -20,6 +30,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px;
+    margin: 0px;
+    --red: #BE2F21;
+    --darkred: #9D251A;
+    --lighter: #F6F6F6;
+    --grey: #797979;
 }
 
 .secondaryHeader {
