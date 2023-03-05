@@ -1,105 +1,181 @@
-@media screen and (max-width: 1px) {
-    /* TODO */
 
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("/fonts/Roboto-Regular.ttf");
 }
 
-
-
-.mainBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 70%;
-}
-
-.header {
-    width: 100%;
-    height: 50%;
-    background-color: #9D251A;
-    color: white;
-    font-size:2em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 40px;
-}
-
-body {
-    font-family: Consolas;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
+:root{
     --red: #BE2F21;
     --darkred: #9D251A;
     --lighter: #F6F6F6;
     --grey: #797979;
 }
 
-.secondaryHeader {
-    text-align: center;
-}
-
-.radioInputWrapper {
-    height: 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 15px 15px 15px 20px;
-}
-
-.questionWrapper {
-    width: 100%;
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Roboto Regular;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.questionText {
-    margin-block: 0px;
-}
-
-.answerOptionsFormWrapper {
+.header {
     width: 100%;
+    height: fit-content;
+    background-color: #9D251A;
+    color: white;
+    font-size:2.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 2.25em;
+    padding-left: 20%;
 }
 
-.submitButtonWrapper{
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     width: 100%;
+    height: 94%;
+}
+
+.secondaryHeader {
+    margin-top: 40px;
+    font-size: 2em;
+    width: 80%;
+}
+
+.initContainer{
+    width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }
 
-.commonButton{
-    height: 2rem;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-top: 10px;
+.buttonBgImage{
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    line-height: 100px;
+    filter: blur(8px);
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.answerOptionsForm{
+.initOptionText{
+    color: white;
+    width: 50%;
+}
+
+.initOption{
+    font-size: 2em;
+    width: 40%;
+    text-align: center;
+}
+
+.initOption span{
+    position: relative;
+    top: 50%;
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+    width: auto;
+}
+
+.coderButtonBgImage{
+    background-image: url("../images/coder.jpeg");
+    background-position: center;
+}
+
+.coderButtonBgImage:hover{
+    transition-duration : 1s;
+    transition: filter;
+    filter: blur(0px);
+}
+
+.designerButtonBgImage{
+    background-image: url("../images/designer.jpg");
+    background-position: center;
+}
+
+.designerButtonBgImage:hover{
+    filter: blur(0px);
+}
+
+#container{
+    width: 80%;
+    font-size:2.25em;
+}
+
+.questionHeader{
+    width:100%;
+    height: fit-content;
+}
+
+.answersForm{
+    margin-top: 1.5em;
+}
+
+.progressBar{
     width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.progressBarValue{
+    height: 100%;
+    background-color: var(--red);
+}
+
+.radioButton{
+    width: 2em;
+    height: 2em;
+}
+
+.radioContainer{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-bottom: 0.6em;
 }
 
-.answerOptionsWrapper{
+.radioContainer label{
+    margin-left: 0.5em;
+}
+
+#nextQuestion{
+    width: 5em;
+    height: auto;
+    color: white;
+    font-size: 1em;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    padding: 0.2em;
+    background-color: var(--red);
+}
+
+.separator{
+    height: 2px;
     width: 100%;
-    border: 1px solid black;
-    border-radius: 0px 0px 10px 10px;
+    background-color: grey;
 }
 
-.radioInputWrapper{
-    display: flex;
-}
+@media screen and (orientation:portrait) {
+    .initContainer{
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
-.radioInputButton{
-    width: 20px;
-    height: 20px;
-}
-
-.radioInputText{
-    margin-left: 20px;
-    font-size: 20px;
+    .initOption{
+        width: 80%;
+        height: 100%;
+        margin-right: 10%;
+    }
 }

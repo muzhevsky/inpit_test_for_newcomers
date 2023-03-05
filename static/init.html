@@ -8,29 +8,19 @@
 <body>
 <div class="header">Тест на подходящее направление ИнПИТ</div>
 <div class="mainBlock">
-    <h3 class="secondaryHeader">По результатам прохождения данного теста вы узнаете,
-        какое направление Института Прикладных Информационных Технологий и Коммуникаций подходит вам больше всего</h3>
-    <div class="questionWrapper">
-        <div class="answerOptionsFormWrapper">
-            <form class="answerOptionsForm" method="get">
-                <div class="answerOptionsWrapper">
-                    <div class="radioInputWrapper">
-                        <input class="radioInputButton" type="radio" , value="test0", name="preferences">
-                        <span class="radioInputText">тест1</span>
-                    </div>
-                    <div class="radioInputWrapper">
-                        <input class="radioInputButton" type="radio" , value="test1" name="preferences">
-                        <span class="radioInputText">тест2</span>
-                    </div>
-                </div>
-                <div class="submitButtonWrapper">
-                    <input class="commonButton" type="submit" value="Продолжить">
-                </div>
-            </form>
+    <div class="secondaryHeader">Какая сфера деятельности вам больше нравится?</div>
+    <div class="initContainer">
+        <div id="coderButton" class="initOption">
+            <span>Наука и техника</span>
+            <div class="buttonBgImage coderButtonBgImage"></div>
+        </div>
+        <div id="designerButton" class="initOption">
+            <span>Искусство и творчество</span>
+            <div class="buttonBgImage designerButtonBgImage"></div>
         </div>
     </div>
 </div>
 
-<script src="/scripts/initScript.js"></script>
+<script type="text/javascript" src="scripts/initScript.js"></script>
 </body>
 </html>
