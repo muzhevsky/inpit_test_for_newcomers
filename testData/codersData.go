@@ -15,6 +15,40 @@ func GetCodersData() []byte {
 	answers := make([]*CoderAnswer, 0)
 
 	// вопрос 1
+
+	answers = append(answers,
+		&CoderAnswer{
+			Text:  "Отлично",
+			Ifst:  3,
+			Pinf:  2,
+			Pinj:  2,
+			Ivcht: 2,
+		},
+		&CoderAnswer{
+			Text:  "Хорошо",
+			Ifst:  2,
+			Pinf:  3,
+			Pinj:  2,
+			Ivcht: 2,
+		},
+		&CoderAnswer{
+			Text:  "Удовлетворительно",
+			Ifst:  1,
+			Pinf:  2,
+			Pinj:  3,
+			Ivcht: 3,
+		},
+	)
+	coderQuestions = append(coderQuestions, &CoderQuestion{
+		Text:    "Как хорошо вы учитесь?",
+		Answers: answers,
+		//ImageLink: ""
+	})
+	answers = make([]*CoderAnswer, 0)
+	//////////////////////////////////////////////////////////////////////////////////////
+
+	// вопрос 2
+
 	answers = append(answers,
 		&CoderAnswer{
 			Text:  "Разработка приложений",
@@ -47,7 +81,7 @@ func GetCodersData() []byte {
 	answers = make([]*CoderAnswer, 0)
 	//////////////////////////////////////////////////////////////////////////////////////
 
-	// вопрос 2
+	// вопрос 3
 
 	answers = append(answers,
 		&CoderAnswer{
@@ -87,7 +121,7 @@ func GetCodersData() []byte {
 	answers = make([]*CoderAnswer, 0)
 	//////////////////////////////////////////////////////////////////////////////////////
 
-	// вопрос 3
+	// вопрос 4
 
 	answers = append(answers,
 		&CoderAnswer{
@@ -113,7 +147,7 @@ func GetCodersData() []byte {
 	answers = make([]*CoderAnswer, 0)
 	//////////////////////////////////////////////////////////////////////////////////////
 
-	// вопрос 4
+	// вопрос 5
 
 	answers = append(answers,
 		&CoderAnswer{
@@ -138,37 +172,69 @@ func GetCodersData() []byte {
 	})
 	answers = make([]*CoderAnswer, 0)
 
-	// вопрос 5
+	// вопрос 6
+
+	answers = append(answers,
+		&CoderAnswer{
+			Text:  "Хочу",
+			Ifst:  2,
+			Pinf:  2,
+			Pinj:  3,
+			Ivcht: 0,
+		},
+		&CoderAnswer{
+			Text:  "Не хочу",
+			Ifst:  1,
+			Pinf:  1,
+			Pinj:  0,
+			Ivcht: 3,
+		},
+	)
+	coderQuestions = append(coderQuestions, &CoderQuestion{
+		Text:    "Хотели бы вы контролировать процесс разработки через поиск ошибок в чужом коде?",
+		Answers: answers,
+		//ImageLink: ""
+	})
+	answers = make([]*CoderAnswer, 0)
+
+	// вопрос 6
 
 	answers = append(answers,
 		&CoderAnswer{
 			Text:  "Отлично",
 			Ifst:  3,
 			Pinf:  2,
-			Pinj:  2,
-			Ivcht: 2,
+			Pinj:  1,
+			Ivcht: 0,
 		},
 		&CoderAnswer{
 			Text:  "Хорошо",
-			Ifst:  2,
+			Ifst:  1,
 			Pinf:  3,
 			Pinj:  2,
 			Ivcht: 2,
 		},
 		&CoderAnswer{
 			Text:  "Удовлетворительно",
-			Ifst:  1,
-			Pinf:  2,
-			Pinj:  3,
-			Ivcht: 3,
+			Ifst:  0,
+			Pinf:  0,
+			Pinj:  1,
+			Ivcht: 1,
+		},
+		&CoderAnswer{
+			Text:  "Плохо",
+			Ifst:  0,
+			Pinf:  0,
+			Pinj:  0,
+			Ivcht: 0,
 		},
 	)
 	coderQuestions = append(coderQuestions, &CoderQuestion{
-		Text:    "Как хорошо вы учитесь?",
+		Text:    "Хорошо ли вы учитесь?",
 		Answers: answers,
 		//ImageLink: ""
 	})
-	answers = make([]*CoderAnswer, 0)
+
 	//////////////////////////////////////////////////////////////////////////////////////
 
 	descriptions := make(map[string]Description)
