@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     coderButton.addEventListener("click", onCoderButtonClick)
     designerButton.addEventListener("click", onDesignerButtonClick)
 
+
+
     function onCoderButtonClick(){
         window.location = "/test/?preferences=coding"
     }
@@ -9,4 +11,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function onDesignerButtonClick(){
         window.location = "/test/?preferences=design"
     }
+
 });

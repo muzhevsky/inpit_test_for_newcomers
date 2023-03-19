@@ -16,7 +16,7 @@ func (server *Server) ConfigureRouter() {
 func Handle(server *Server) {
 	router := server.GetRouter()
 	router.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		util.SendHtml(writer, "static/init.html")
+		util.SendHtml(writer, "static/index.html")
 	}).Methods(http.MethodGet)
 
 	router.HandleFunc("/test/", func(w http.ResponseWriter, r *http.Request) {
@@ -26,7 +26,7 @@ func Handle(server *Server) {
 		preferences := forms.Get("preferences")
 
 		if preferences == "" {
-			util.SendHtml(w, "static/init.html")
+			util.SendHtml(w, "static/index.html")
 			return
 		}
 
