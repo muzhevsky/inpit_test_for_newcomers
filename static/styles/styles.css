@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Roboto Regular";
-    src: url("/fonts/Roboto-Regular.ttf");
+    src: url("/static/fonts/Roboto-Regular.ttf");
 }
 
 :root{
@@ -8,6 +8,23 @@
     --darkred: #9D251A;
     --lighter: #F6F6F6;
     --grey: #797979;
+}
+
+.specialitiesInfo{
+    width: 80%;
+}
+
+.card-header{
+    background-color: white;
+    padding-left: 0px;
+}
+
+.card {
+    border: none;
+}
+
+#accordion{
+    border: none;
 }
 
 html{
@@ -25,8 +42,8 @@ body {
     height: fit-content;
     background-color: #9D251A;
     color: white;
-    font-size: 2.5rem;
-    line-height: 2.25rem;
+    font-size: 2rem;
+    line-height: 1.75rem;
     padding-left: 10%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -40,14 +57,32 @@ body {
     width: 100%;
 }
 
-.secondaryHeader {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 2rem;
+.aboutUniversity{
     width: 80%;
 }
 
+.card-header:hover{
+    cursor: pointer;
+}
+
+p{
+    width: 80%;
+}
+
+h2{
+    padding-top: 20px;
+    width: 80%;
+    font-size: 2rem;
+}
+
+h3{
+    padding-top: 20px;
+    width: 80%;
+    font-size: 1.7rem;
+}
+
 .initContainer{
+    margin-top: 20px;
     width: 100%;
     height: 90vh;
     display: flex;
@@ -97,7 +132,8 @@ body {
 
 #container{
     width: 80%;
-    font-size:2.25rem;
+    font-size:1.8rem;
+    padding: 30px;
 }
 
 .questionHeader{
@@ -162,7 +198,7 @@ body {
     margin: 3rem 3rem 3rem;
     padding: 0.7rem;
     background-color: var(--red);
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 10px;
 }
 
@@ -179,7 +215,7 @@ body {
     }
 
     .blackBlock span{
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     .initOption{
@@ -189,6 +225,7 @@ body {
 
     #container{
         width: 90%;
+        padding: 30px;
     }
 
     .header{
@@ -199,12 +236,18 @@ body {
         text-align: center;
     }
 
-    .secondaryHeader{
+    h2{
         padding-top: 20px;
         padding-bottom: 20px;
-        width: 100%;
-        text-align: center;
-        font-size: 2.75rem;
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    h3{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 80%;
+        font-size: 1.7rem;
     }
 
     html{
@@ -212,6 +255,15 @@ body {
     }
 
     .radioContainer label{
-        font-size: 2.25rem;
+        font-size: 1.75rem;
     }
+
+    .aboutUniversity p{
+        padding-left: 0px;
+    }
+    .aboutUniversity h3{
+        padding-left: 0px;
+    }
+
+
 }

@@ -41,39 +41,21 @@ func Handle(server *Server) {
 		var content string
 
 		if preferences == "coding" {
-			content = str[:index] + "<script type=\"text/javascript\" src=\"../scripts/coders.js\"></script>" + str[index:]
+			content = str[:index] + "<script type=\"text/javascript\" src=\"../static/scripts/coders.js\"></script>" + str[index:]
 		} else if preferences == "design" {
-			content = str[:index] + "<script type=\"text/javascript\" src=\"scripts/designers.js\"></script>" + str[index:]
+			content = str[:index] + "<script type=\"text/javascript\" src=\"../static/scripts/designers.js\"></script>" + str[index:]
 		}
 
 		w.Write([]byte(content))
 	})
 
-	router.HandleFunc("/styles/styles.css", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/styles/styles.css")
-	}).Methods(http.MethodGet)
+	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
-	router.HandleFunc("/images/coder.jpeg", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/images/coder.jpeg")
-	}).Methods(http.MethodGet)
-
-	router.HandleFunc("/images/designer.jpg", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/images/designer.jpg")
-	}).Methods(http.MethodGet)
-
-	router.HandleFunc("/fonts/Roboto-Regular.ttf", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/fonts/Roboto-Regular.ttf")
-	}).Methods(http.MethodGet)
-
-	router.HandleFunc("/scripts/initScript.js", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/scripts/initScript.js")
-	}).Methods(http.MethodGet)
-
-	router.HandleFunc("/scripts/coders.js", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/scripts/coders.js")
-	}).Methods(http.MethodGet)
-
-	router.HandleFunc("/test/testData.json", func(w http.ResponseWriter, r *http.Request) {
+	router.HandleFunc("/test/codersData.json", func(w http.ResponseWriter, r *http.Request) {
 		w.Write(testData.GetCodersData())
+	}).Methods(http.MethodGet)
+
+	router.HandleFunc("/test/designersData.json", func(w http.ResponseWriter, r *http.Request) {
+		w.Write(testData.GetDesignersData())
 	}).Methods(http.MethodGet)
 }

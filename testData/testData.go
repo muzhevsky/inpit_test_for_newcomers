@@ -16,7 +16,7 @@ type CoderAnswer struct {
 
 type DesignerQuestion struct {
 	Text      string
-	Answers   []*CoderAnswer
+	Answers   []*DesignerAnswer
 	ImageLink string
 }
 
