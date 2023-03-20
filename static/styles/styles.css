@@ -17,6 +17,7 @@
 .card-header{
     background-color: white;
     padding-left: 0px;
+    font-size: 1.7rem;
 }
 
 .card {
@@ -36,13 +37,14 @@ body {
     padding: 0px;
     margin: 0px;
     overscroll-behavior-y: contain;
+    min-width: 740px;
 }
 
 .header {
     height: fit-content;
     background-color: #9D251A;
     color: white;
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 1.75rem;
     padding-left: 10%;
     padding-top: 20px;
@@ -230,10 +232,9 @@ h3{
 
     .header{
         width: 100%;
-        padding-left: 0%;
+        padding-left: 5%;
         padding-top: 20px;
         padding-bottom: 20px;
-        text-align: center;
     }
 
     h2{
@@ -265,5 +266,8 @@ h3{
         padding-left: 0px;
     }
 
+    .specialitiesInfo, .aboutUniversity, .mainBlock h2, .mainBlock h3{
+        width: 90%;
+    }
 
 }
