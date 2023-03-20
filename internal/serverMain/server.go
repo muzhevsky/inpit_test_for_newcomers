@@ -1,18 +1,20 @@
 package serverMain
 
 import (
+	"MyServer/database"
 	"fmt"
 	"github.com/gorilla/mux"
 	"net/http"
 )
 
 type Server struct {
-	adress     string
-	router     *mux.Router
-	httpClient *http.Client
+	adress          string
+	router          *mux.Router
+	httpClient      *http.Client
+	databaseHandler *database.DatabaseHandler
 }
 
-func (server *Server) Initialize(dto *Dto) {
+func (server *Server) Initialize(dto *ServerParams, databaseHandler *database.DatabaseHandler) {
 	if dto.Adress == "" {
 		server.adress = "127.0.0.1"
 	} else {
@@ -27,6 +29,7 @@ func (server *Server) Initialize(dto *Dto) {
 
 	server.router = mux.NewRouter()
 	server.httpClient = &http.Client{}
+	server.databaseHandler = databaseHandler
 }
 
 func (server *Server) Start() error {
@@ -42,4 +45,8 @@ func (server *Server) GetRouter() *mux.Router {
 
 func (server *Server) GetHTTPClient() *http.Client {
 	return server.httpClient
+}
+
+func (server *Server) GetDatabaseHandler() *database.DatabaseHandler {
+	return server.databaseHandler
 }

@@ -58,4 +58,8 @@ func Handle(server *Server) {
 	router.HandleFunc("/test/designersData.json", func(w http.ResponseWriter, r *http.Request) {
 		w.Write(testData.GetDesignersData())
 	}).Methods(http.MethodGet)
+
+	router.HandleFunc("/test123", func(w http.ResponseWriter, r *http.Request) {
+		w.Write(server.GetDatabaseHandler().GetDefaultRepository().GetQuestions())
+	}).Methods(http.MethodGet)
 }
